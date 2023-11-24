@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express(); //-- http szervert tudunk vele 
+const add = require('add');
 const deleted = require('detele');
 const updated = require('updated');
 // JSON adatok fogadása miatt
@@ -47,7 +48,7 @@ app.connect(function(err) {
     if (err) throw err;
     console.log("Connected!");
     // SELECT * FROM ugyfel WHERE azon = ${req.params.id}
-    var sql = `INSERT INTO ugyfel VALUES azon: ${req.params.id}, neve: ${req.params.nev}, születésiéve: ${req.params.szulev}, irányítószám: ${req.params.irszam}, ország: ${req.params.orsz}`;
+    var add = `INSERT INTO ugyfel VALUES azon: ${req.params.id}, neve: ${req.params.nev}, születésiéve: ${req.params.szulev}, irányítószám: ${req.params.irszam}, ország: ${req.params.orsz}`;
     con.send(rows)       
     console.log("1 record inserted");    
 });
