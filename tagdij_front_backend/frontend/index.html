@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <script src="path/to/bootstrap/js/popper.min.js"></script>
+  <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="tagdij.css">
+  <title>Ügyfélkezelő Rendszer</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Ügyfélkezelő Rendszer</h1>
+    <ul id="clientList"></ul>
+  
+    <!-- Új ügyfél hozzáadása form -->
+    <h2>Ügyfél hozzáadás</h2>
+    <form id="add">
+      <label for="name">Név:</label>
+      <input type="text" id="name" required>
+      <label for="membershipFee">Tagdíj:</label>
+      <input type="number" id="membershipFee" required>
+      <button type="submit" class="btn btn-success">Hozzáadás</button>
+    </form>
+    
+    <!-- Ügyfél adatainak módosítása form -->
+    <h2>Ügyfél adatainak módosítása</h2>
+    <form id="updated">
+      <label for="clientIdToUpdate">Ügyfél ID:</label>
+      <input type="number" id="clientIdToUpdate" required>
+      <label for="updatedName">Új név:</label>
+      <input type="text" id="updatedName" required>
+      <label for="updatedMembershipFee">Új tagdíj:</label>
+      <input type="number" id="updatedMembershipFee" required>
+      <button type="submit" class="btn btn-success">Módosítás</button>
+    </form>
+  
+    <!-- Ügyfél törlése form -->
+    <h2>Ügyfél törlése</h2>
+    <form id="delete">
+      <label for="clientIdToDelete">Ügyfél ID:</label>
+      <input type="number" id="clientIdToDelete" required>
+      <button type="submit" class="btn btn-success">Törlés</button>
+    </form>
+  </div>
+  <script src="backend/szerver.js"></script>
+  <script src="frontend/tagdij.js"></script>
+</body>
+</html>
