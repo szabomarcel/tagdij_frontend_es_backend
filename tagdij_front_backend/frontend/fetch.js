@@ -66,12 +66,7 @@ function showAllUsers(users) {
 }
 
 async function betoltInputMezobe(id) {
-    let connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'tagdij'
-    });
+    let endpoint = "http://localhost:3000";
     try {
         const response = await fetch(url);
         const users = await response.json();
@@ -86,12 +81,7 @@ async function betoltInputMezobe(id) {
 
 //-- új user létrehozása -------------------------------
 buttonCreate.addEventListener("click", async () => {
-    let connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'tagdij'
-    });
+    let endpoint = "http://localhost:3000";
     let data = {
         username: inputUsername.value,
         darab: inputDarab.value
@@ -114,12 +104,7 @@ buttonCreate.addEventListener("click", async () => {
 
 //-- user módosítása ------------------------------------
 buttonUpdate.addEventListener("click", async () => {
-    let connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'tagdij'
-    });
+    let endpoint = "http://localhost:3000";
     let data = {
         username: inputUsername.value,
         darab: inputDarab.value
@@ -142,12 +127,7 @@ buttonUpdate.addEventListener("click", async () => {
 
 //-- user törlése ----------------------------------------
 buttonDelete.addEventListener("click", async () => {
-    let connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'tagdij'
-    });
+    let endpoint = "http://localhost:3000";
     try {
         const response = await fetch(url, {
             method: "DELETE",
