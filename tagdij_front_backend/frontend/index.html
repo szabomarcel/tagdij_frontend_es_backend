@@ -11,40 +11,44 @@
 </head>
 <body>
   <div class="container">
-    <h1>Ügyfélkezelő Rendszer</h1>
     <ul id="clientList"></ul>
-  
-    <!-- Új ügyfél hozzáadása form -->
-    <h2>Ügyfél hozzáadás</h2>
-    <form id="add">
-      <label for="name">Név:</label>
-      <input type="text" id="name" required>
-      <label for="membershipFee">Tagdíj:</label>
-      <input type="number" id="membershipFee" required>
-      <button type="submit" class="btn btn-success">Hozzáadás</button>
-    </form>
-    
-    <!-- Ügyfél adatainak módosítása form -->
-    <h2>Ügyfél adatainak módosítása</h2>
-    <form id="updated">
-      <label for="clientIdToUpdate">Ügyfél ID:</label>
-      <input type="number" id="clientIdToUpdate" required>
-      <label for="updatedName">Új név:</label>
-      <input type="text" id="updatedName" required>
-      <label for="updatedMembershipFee">Új tagdíj:</label>
-      <input type="number" id="updatedMembershipFee" required>
-      <button type="submit" class="btn btn-success">Módosítás</button>
-    </form>
-  
-    <!-- Ügyfél törlése form -->
-    <h2>Ügyfél törlése</h2>
-    <form id="delete">
-      <label for="clientIdToDelete">Ügyfél ID:</label>
-      <input type="number" id="clientIdToDelete" required>
-      <button type="submit" class="btn btn-success">Törlés</button>
-    </form>
+    <div class="row">
+      <div class="col-4">
+        <!-- Személy hozzáadása form -->
+        <h2>Személy hozzáadás</h2>
+        <form id="add">
+          <input type="text" id="name" required>
+          <label for="name">Név:</label>
+          <input type="number" id="membershipFee" required>
+          <label for="membershipFee">Tagdíj:</label>
+          <button type="submit" class="btn btn-outline-dark">Hozzáadás</button>
+        </form>  
+      </div>
+      <div class="col-4">
+        <!-- Személy adatainak módosítása form -->
+        <h2>Személy adatainak módosítása</h2>
+        <form id="updated">
+          <input type="number" id="clientIdToUpdate" required>
+          <label for="clientIdToUpdate">Ügyfél ID:</label>
+          <input type="text" id="updatedName" required>
+          <label for="updatedName">Név:</label>
+          <input type="number" id="updatedMembershipFee" required>
+          <label for="updatedMembershipFee">Új tagdíj:</label>
+          <button type="submit" class="btn btn-outline-primary">Módosítás</button>
+        </form>
+      </div>
+      <div class="col-4">
+        <!-- Személy törlése form -->
+        <h2>Személy törlése</h2>
+        <form id="delete">
+          <input type="number" id="clientIdToDelete" required>
+          <label for="clientIdToDelete">Ügyfél ID:</label>
+          <button type="submit" class="btn btn-outline-danger">Törlés</button>
+        </form>
+      </div>
+    </div>
   </div>
-  <script src="backend/szerver.js"></script>
-  <script src="frontend/tagdij.js"></script>
+  <script src="./backend/szerver.js"></script>
+  <script src="tagdij.js"></script>
 </body>
 </html>

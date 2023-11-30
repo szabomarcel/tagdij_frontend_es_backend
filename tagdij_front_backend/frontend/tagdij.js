@@ -55,26 +55,26 @@ app.connect(function(err) {
 
 // ügyfél törlése
 app.set(dir, { req, res}, err => {
-    let deleted = "DELETE FROM `ugyfel` WHERE `ugyfel`.`azon`= ?;";
+    let deleted = "DELETE FROM `ugyfel` WHERE `azon`";
     if (err) throw err;
-    res.send(rows);
-    console.log(`${id} is deleted!`);
+    res.send(deleted);
+    //console.log(`${id} is deleted!`);
 });
 
 // ügyfél adatainak a törlése
 app.set(dir, { req, res}, err => {
-    let deleted = "DELETE FROM `ugyfel` WHERE `ugyfel`.`azon`= ?, `ugyfel`.`nev`= ?, `ugyfel`.`szulev`= ?, `ugyfel`.`irszam`= ?; `ugyfel`.`orsz`= ?";
+    let deleted = "DELETE FROM `ugyfel` WHERE `azon`, `nev`, `szulev`, `irszam`, `orsz`" //"DELETE FROM `ugyfel` WHERE `ugyfel`.`azon`= ?, `ugyfel`.`nev`= ?, `ugyfel`.`szulev`= ?, `ugyfel`.`irszam`= ?; `ugyfel`.`orsz`= ?";
     if (err) throw err;
-    res.send(rows);
-    console.log(`${id}, ${nev}, ${szulev}, ${irszam}, ${orsz} is deleted!`);
+    res.send(deleted);
+    //console.log(`${id}, ${nev}, ${szulev}, ${irszam}, ${orsz} is deleted!`);
 });
 
 // ügyfél adatainak a módosítása
 app.set(dir, { req, res}, err => {
-    let UPDATE = "UPDATE `ugyfel` SET `nev`= ?,`szulev`= ?,`irszam`= ?,`orszag`= ?,";
+    let UPDATE = "UPDATE `ugyfel` SET `azon`='[value-1]',`nev`='[value-2]',`szulev`='[value-3]',`irszam`='[value-4]',`orsz`='[value-5]' WHERE 1";
     if (err) throw err;
-    res.send(rows);
-    console.log(`${id}, ${nev}, ${szulev}, ${irszam}, ${orsz} is deleted!`);
+    res.send(UPDATE);
+    //console.log(`${id}, ${nev}, ${szulev}, ${irszam}, ${orsz} is deleted!`);
 });
 
 // 3000-re viszi a működéshez képest
