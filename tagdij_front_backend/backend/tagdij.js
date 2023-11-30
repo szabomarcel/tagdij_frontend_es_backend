@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express(); //-- http szervert tudunk vele 
-const add = require('add');
+const buttonRead = document.querySelector("#read");
+const add = require('create');
 const deleted = require('detele');
 const updated = require('updated');
 // JSON adatok fogadása miatt

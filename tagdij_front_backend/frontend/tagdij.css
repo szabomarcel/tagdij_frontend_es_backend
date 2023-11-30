@@ -2,3 +2,12 @@ body{
     background-color: antiquewhite;
     color: chocolate;
 }
+
+header {
+    background-image: url('https://www.azenpenzem.hu/image/?id=5433&ext=jpg&th=art_in');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color :yellow;
+}
